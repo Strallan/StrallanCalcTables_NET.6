@@ -1,0 +1,102 @@
+﻿<UserControl
+    x:Class="Kodama.TabButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controlTools="clr-namespace:Infratools;assembly=InfraTools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Kodama"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="tabButton"
+    d:DesignHeight="44"
+    d:DesignWidth="203"
+    Background="#3b3b3b"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+
+        <controlTools:StringToImageConverter x:Key="StrToImg" />
+
+        <!--
+            если надо связать свойство зависимости элемента в стиле со свойством зависимости
+            в контроле, то в этом случае можно создать дополнительный стиль для элемента, где
+            свойство будет будет связано
+        -->
+        <Style x:Key="borderRadiusStyle" TargetType="Border">
+            <Setter Property="CornerRadius" Value="{Binding ElementName=tabButton, Path=CloseButtonRadius}" />
+        </Style>
+
+        <!--  а можно просто связять свойство со свойством в самом стиле  -->
+        <Style x:Key="closeButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Width="{Binding ElementName=tabButton, Path=CloseButtonSize}"
+                            Height="{Binding ElementName=tabButton, Path=CloseButtonSize}"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{Binding ElementName=tabButton, Path=CloseButtonRadius}">
+
+                            <ContentPresenter />
+
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="32" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition x:Name="underLine" Height="3" />
+        </Grid.RowDefinitions>
+
+        <Rectangle
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Fill="{Binding ElementName=tabButton, Path=Background}" />
+
+        <Rectangle
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Fill="{Binding ElementName=tabButton, Path=BottomLineBrush}" />
+
+        <Image
+            x:Name="tabIcon"
+            Grid.Row="0"
+            Grid.Column="0"
+            Source="{Binding ElementName=tabButton, Path=TabIconPath, Converter={StaticResource StrToImg}}" />
+
+        <TextBlock
+            x:Name="tabText"
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="2,0,2,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="{Binding ElementName=tabButton, Path=TabNameText}" />
+
+        <!--
+            https://stackoverflow.com/questions/13644114/how-can-i-access-a-control-in-wpf-from-another-class-or-window
+            как
+        -->
+        <Button
+            x:Name="tabCloseButton"
+            Grid.Row="0"
+            Grid.Column="2"
+            x:FieldModifier="public"
+            Background="{Binding ElementName=tabButton, Path=CloseButtonBrush}"
+            Style="{StaticResource closeButtonStyle}">
+            <Image Source="/IMG/close_cross.png" />
+        </Button>
+
+    </Grid>
+</UserControl>

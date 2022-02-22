@@ -1,0 +1,27 @@
+﻿<Window x:Class="CalcTables.FilterDefinitionView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalcTables"
+        mc:Ignorable="d"
+        Title="FilterDefinitionView" Width="200"
+        WindowStyle="ToolWindow"
+        BorderBrush="White"
+        ResizeMode="NoResize" 
+        SizeToContent="Height"
+        >
+    <Grid>
+        <StackPanel>
+            <TextBox
+                Margin="3"
+                Text="{Binding FilterRule, Mode=TwoWay}"
+                ></TextBox>
+            <Button 
+                Content="Set New Rule" 
+                Margin="3" 
+                Command="{Binding NewFilterRuleCmd}"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <windows count="{number_of_windows}">
+    <window order="{main | window_number}">
+      <placement>
+        <!-- Информация о положении окна от Server.GetWindowPlacement -->
+      </placement>
+      <tabs count="{number_of_tabs}">
+        <tab class="{tab_class}" order="{tab_order}" active="{yes | no}">
+          <content>
+
+          </content>
+        </tab>
+        
+        <tab class="" order="" active="">
+        </tab>
+      </tabs>
+    </window>
+    
+    <window order="">
+    </window>
+    
+  </windows>
+</root>

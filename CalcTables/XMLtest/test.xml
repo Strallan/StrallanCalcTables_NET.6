@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationStateConfig>
+	<ApplicationWindows count="1">
+    
+		<WindowConfig main="yes">
+			  <Placement>
+				<!-- Информация о положении окна от Server.GetWindowPlacement -->
+			  </Placement>
+			  <TabPanel count="4">
+        
+				<TabButton 
+					pagetype="Groups" 
+					order="4" 
+					active="no">
+					<Content>
+
+					</Content>
+				</TabButton>
+
+				<TabButton
+					pagetype="RigidBodies"
+					order="2"
+					active="yes">
+					<Content>
+				
+					</Content>
+				</TabButton>
+
+				<TabButton
+					pagetype="FrameCoreElements"
+					order="3"
+					active="no">
+					<Content>
+				  
+					</Content>
+				</TabButton>
+
+				<TabButton
+					pagetype="CableElements"
+					order="1"
+					active="no">
+					<Content>
+				  
+					</Content>
+				</TabButton>
+		  
+		  </TabPanel>
+		</WindowConfig>
+		
+		
+		
+    <WindowConfig main="no">
+
+		<Placement>
+			<!-- Информация о положении окна от Server.GetWindowPlacement -->
+		</Placement>
+		<TabPanel count="4">
+
+			<TabButton
+				pagetype="Loads"
+				order="4"
+				active="no">
+				<Content>
+
+				</Content>
+			</TabButton>
+
+			<TabButton
+				pagetype="SpringElements"
+				order="2"
+				active="no">
+				<Content>
+
+				</Content>
+			</TabButton>
+
+			<TabButton
+				pagetype="SuperElements"
+				order="3"
+				active="no">
+				<Content>
+
+				</Content>
+			</TabButton>
+
+			<TabButton
+				pagetype="CoordinateSystems"
+				order="1"
+				active="yes">
+				<Content>
+
+				</Content>
+			</TabButton>
+		</TabPanel>
+		
+    </WindowConfig>
+		
+    
+  </ApplicationWindows>
+</ApplicationStateConfig>

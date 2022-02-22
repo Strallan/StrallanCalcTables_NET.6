@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationStateConfig>
+  <ApplicationWindows count="2">
+    <WindowConfig main="yes">
+      <Placement />
+      <TabPanel count="4">
+        <TabButton pagetype="CoordinateSystems" order="1" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="FrameCoreElements" order="2" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Groups" order="3" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Nodes" order="4" active="yes">
+          <Content />
+        </TabButton>
+      </TabPanel>
+    </WindowConfig>
+    <WindowConfig main="no">
+      <Placement />
+      <TabPanel count="4">
+        <TabButton pagetype="SuperElements" order="1" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="SpringElements" order="2" active="yes">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Sections" order="3" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="RigidBodies" order="4" active="no">
+          <Content />
+        </TabButton>
+      </TabPanel>
+    </WindowConfig>
+  </ApplicationWindows>
+</ApplicationStateConfig>

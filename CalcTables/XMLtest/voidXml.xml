@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationStateConfig>
+  <ApplicationWindows count="2">
+    <WindowConfig main="yes">
+      <Placement />
+      <TabPanel count="5">
+        <TabButton pagetype="SuperElements" order="1" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="SpringElements" order="2" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Sections" order="3" active="yes">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="RigidBodies" order="4" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="CsOrientation" order="5" active="no">
+          <Content />
+        </TabButton>
+      </TabPanel>
+    </WindowConfig>
+    <WindowConfig main="no">
+      <Placement />
+      <TabPanel count="6">
+        <TabButton pagetype="CoordinateSystems" order="1" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="CableElements" order="2" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Groups" order="3" active="yes">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Loads" order="4" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Materials" order="5" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Nodes" order="6" active="no">
+          <Content />
+        </TabButton>
+      </TabPanel>
+    </WindowConfig>
+  </ApplicationWindows>
+</ApplicationStateConfig>

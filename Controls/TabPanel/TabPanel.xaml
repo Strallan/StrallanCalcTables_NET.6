@@ -1,0 +1,75 @@
+﻿<UserControl
+    x:Class="Kodama.TabPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controlTools="clr-namespace:Infratools;assembly=InfraTools"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Kodama"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="tabPanel"
+    Height="35"
+    d:DesignHeight="35"
+    d:DesignWidth="800"
+    Background="#EAE6CA"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+
+        <controlTools:BoolToVisibilityConverter x:Key="boolToVisibility" />
+
+        <!--  стиль вкладки  -->
+        <Style x:Key="tabButton" TargetType="Button">
+            <Setter Property="Width" Value="100" />
+        </Style>
+
+
+    </UserControl.Resources>
+
+
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="auto" />
+
+
+        </Grid.ColumnDefinitions>
+
+
+        <ScrollViewer
+            x:Name="tabScroll"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalScrollBarVisibility="Hidden"
+            VerticalScrollBarVisibility="Hidden">
+            <StackPanel
+                x:Name="tabContainer"
+                x:FieldModifier="public"
+                Orientation="Horizontal" />
+        </ScrollViewer>
+
+
+
+        <StackPanel Grid.Column="1" Orientation="Horizontal">
+
+            <Button
+                x:Name="leftSwipe"
+                Click="LeftTabSwipe_Click"
+                Visibility="{Binding ElementName=tabPanel, Path=SwipeArrowsVisible, Converter={StaticResource boolToVisibility}}">
+                <Image Source="/IMG/arrowLeft.png" />
+            </Button>
+
+            <Button
+                x:Name="rightSwipe"
+                Click="RightTabSwipe_Click"
+                Visibility="{Binding ElementName=tabPanel, Path=SwipeArrowsVisible, Converter={StaticResource boolToVisibility}}">
+                <Image Source="/IMG/rightArrow.png" />
+            </Button>
+
+
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationStateConfig>
+  <ModelGUID>{F0451AF4-4932-11EC-8354-005056B1770C}</ModelGUID>
+  <ApplicationWindows count="2">
+    <WindowConfig main="yes">
+      <Placement />
+      <TabPanel count="2">
+        <TabButton pagetype="Nodes" order="1" active="yes">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="FlatElements" order="2" active="no">
+          <Content />
+        </TabButton>
+      </TabPanel>
+    </WindowConfig>
+    <WindowConfig main="no">
+      <Placement />
+      <TabPanel count="3">
+        <TabButton pagetype="FrameCoreElements" order="1" active="yes">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Groups" order="2" active="no">
+          <Content />
+        </TabButton>
+        <TabButton pagetype="Loads" order="3" active="no">
+          <Content />
+        </TabButton>
+      </TabPanel>
+    </WindowConfig>
+  </ApplicationWindows>
+</ApplicationStateConfig>

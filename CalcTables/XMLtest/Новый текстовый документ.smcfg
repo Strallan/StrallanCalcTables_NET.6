@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ApplicationStateConfig>
+  <ModelGUID>{6B454734-569D-11EC-8364-005056B1770C}</ModelGUID>
+  <ApplicationWindows count="2">
+	<WindowConfig main="yes">
+      <Placement />
+      <TabPanel count="1">
+        <TabButton pagetype="Nodes" order="1" active="yes">
+          <Content />
+        </TabButton>
+      </TabPanel>
+    </WindowConfig>
+  </ApplicationWindows>
+</ApplicationStateConfig>

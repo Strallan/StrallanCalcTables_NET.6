@@ -1,0 +1,55 @@
+﻿<Window x:Class="CalcTables.TabPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalcTables"
+        xmlns:controllib="clr-namespace:Kodama;assembly=Controls"
+        mc:Ignorable="d"
+        Title="TabPanelWindow" Height="450" Width="800">
+    <Grid
+        x:Name="mainGrid"
+        >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+
+        <!--
+        <controllib:TabButton
+            x:Name="modelTabButton"
+            TabNameText="Модель"
+            Foreground="Wheat"
+            MouseLeftButtonUp="ModelTabButton_MouseLeftButtonUp"
+            >
+            <controllib:TabButton.ContextMenu>
+                <ContextMenu>
+
+                </ContextMenu>
+            </controllib:TabButton.ContextMenu>
+
+        </controllib:TabButton>
+        -->
+
+        <controllib:TabPanel
+            x:Name="tabPanel"
+            Grid.Column="1"
+            x:FieldModifier="public"
+            >
+            <controllib:TabPanel.ContextMenu>
+                <ContextMenu
+                    
+                    >
+
+                </ContextMenu>
+            </controllib:TabPanel.ContextMenu>
+
+        </controllib:TabPanel>
+    </Grid>
+</Window>
+
